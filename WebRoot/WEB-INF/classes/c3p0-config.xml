@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+     <!-- This app is massive! -->
+    <named-config name="Exam">
+    	
+        <property name="acquireIncrement">50</property>
+        <!-- 连接池初始化时建立的连接数 默认值是3 -->
+        <property name="initialPoolSize">100</property>
+        <!-- 连接池中保持的最小连接数  默认值为3个-->
+        <property name="minPoolSize">50</property>
+        <!-- 连接池中保持的最大连接数  默认值为3个-->
+        <property name="maxPoolSize">1000</property>
+        <!-- intergalactoApp adopts a different approach to configuring statement caching -->
+        <property name="maxStatements">10</property>
+        <property name="maxStatementsPerConnection">5</property>
+        <property name="user">sa</property>
+		<property name="password">dean6405</property>
+		<property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+		<property name="jdbcUrl">jdbc:sqlserver://192.168.31.210:1433;databaseName=Exam</property>
+    </named-config>
+</c3p0-config>

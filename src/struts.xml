@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.locale" value="zh_CN" />
+   	<constant name="struts.i18n.encodeing" value="UTF-8"/>	<!--  乱码 -->
+    <package name="default" namespace="/" extends="struts-default">		
+	       <action name="download" class="com.imooc.drdc.action.FileDownloadAction">
+	       		<result name="success" type="stream">
+	       			<param name="contentType">application/octet-stream</param>
+	       			<param name="inputName">inputStream</param>
+	       			<param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+	       			<param name="bufferSize">8192</param>
+	       		</result>
+	       </action>
+	       <action name="score-*" class="com.wujunyu.imoprt.ExamResultAction" method="{1}">
+	       		<result>/wujunyucg/view.jsp</result>
+	       </action>
+    </package>
+
+
+</struts>

@@ -1,0 +1,56 @@
+package com.dean.bean;
+
+public class Notice {
+ 
+	private int notice_id;
+	private String tea_number;
+	private String tea_name;
+	private String cla_number;
+	private String notice_content;
+	private String notice_title;
+	private String notice_time;
+	
+	public int getNotice_id() {
+		return notice_id;
+	}
+	public void setNotice_id(int notice_id) {
+		this.notice_id = notice_id;
+	}
+	public String getTea_number() {
+		return tea_number;
+	}
+	public void setTea_number(String tea_number) {
+		this.tea_number = tea_number;
+	}
+	public String getTea_name() {
+		return tea_name;
+	}
+	public void setTea_name(String tea_name) {
+		this.tea_name = tea_name;
+	}
+	
+	public String getCla_number() {
+		return cla_number;
+	}
+	public void setCla_number(String cla_number) {
+		this.cla_number = cla_number;
+	}
+	public String getNotice_content() {
+		return notice_content;
+	}
+	public void setNotice_content(String notice_content) {
+		this.notice_content = notice_content;
+	}
+	public String getNotice_title() {
+		return notice_title;
+	}
+	public void setNotice_title(String notice_title) {
+		this.notice_title = notice_title;
+	}
+	public String getNotice_time() {
+		return notice_time;
+	}
+	public void setNotice_time(String notice_time) {
+		this.notice_time = notice_time;
+	}
+}
